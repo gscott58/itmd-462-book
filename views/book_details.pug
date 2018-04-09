@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1.text-center= title
+  div.container-fluid
+ 
+      h1 Book Details
+
+      if error
+        p Error getting dynamic content.
+      else
+        p.lead.bg-primary The following are details of selected book:
+
+        ul
+        
+          li #[strong Title :]  #{book.title} 
+          li #[strong Author:]  #{book.author}
+          li #[strong Pages :]  #{book.numPages}
+          
